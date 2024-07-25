@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13
+    ports:
+      - "54323:5432"
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - supabase_db:/var/lib/postgresql/data
+
+  auth:
+    image: supabase/gotrue:0.22.7
+    depends_on:
+      - db
+    ports:
+      - "9999:9999"
+    environment:
+      GOTRUE_DB_DRIVER: "postgres"
+      GOTRUE_DB_DATABASE_URL: "postgres://postgres:postgres@db:5432/postgres"
+      GOTRUE_SITE_URL: "http://localhost:8000"
+      GOTRUE_API_URL: "http://localhost:9999"
+      GOTRUE_JWT_SECRET: "supersecret"
+
+  storage:
+    image: supabase/storage-api:latest
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+    environment:
+      POSTGRES_URL: "postgres://postgres:postgres@db:5432/postgres"
+
+  api:
+    image: postgrest/postgrest:latest
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+    environment:
+      PGRST_DB_URI: "postgres://postgres:postgres@db:5432/postgres"
+      PGRST_DB_SCHEMA: "public"
+      PGRST_DB_ANON_ROLE: "anon"
+
+  realtime:
+    image: supabase/realtime:latest
+    depends_on:
+      - db
+    ports:
+      - "4000:4000"
+    environment:
+      DB_HOST: "db"
+      DB_PORT: "5432"
+      DB_USER: "postgres"
+      DB_PASSWORD: "postgres"
+      DB_NAME: "postgres"
+      PORT: "4000"
+      SECRET_KEY_BASE: "supersecretkeybase"
+      SIGNING_SALT: "signingsalt"
+
+volumes:
+  supabase_db:

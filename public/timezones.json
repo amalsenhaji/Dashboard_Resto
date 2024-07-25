@@ -1,0 +1,65 @@
+{
+    "zones": [
+      {
+        "id": "Pacific/Midway",
+        "displayName": "(UTC-11:00) Midway Island, American Samoa",
+        "utcOffset": -11
+      },
+      {
+        "id": "Pacific/Honolulu",
+        "displayName": "(UTC-10:00) Hawaii",
+        "utcOffset": -10
+      },
+      {
+        "id": "America/Adak",
+        "displayName": "(UTC-10:00) Aleutian Islands",
+        "utcOffset": -10
+      },
+      {
+        "id": "America/Anchorage",
+        "displayName": "(UTC-09:00) Alaska",
+        "utcOffset": -9
+      },
+      {
+        "id": "America/Tijuana",
+        "displayName": "(UTC-08:00) Baja California",
+        "utcOffset": -8
+      },
+      {
+        "id": "America/Los_Angeles",
+        "displayName": "(UTC-08:00) Pacific Time (US & Canada)",
+        "utcOffset": -8
+      },
+      {
+        "id": "America/Phoenix",
+        "displayName": "(UTC-07:00) Arizona",
+        "utcOffset": -7
+      },
+      {
+        "id": "America/Denver",
+        "displayName": "(UTC-07:00) Mountain Time (US & Canada)",
+        "utcOffset": -7
+      },
+      {
+        "id": "America/Chicago",
+        "displayName": "(UTC-06:00) Central Time (US & Canada)",
+        "utcOffset": -6
+      },
+      {
+        "id": "America/Indiana/Indianapolis",
+        "displayName": "(UTC-05:00) Indiana (East)",
+        "utcOffset": -5
+      },
+      {
+        "id": "America/New_York",
+        "displayName": "(UTC-05:00) Eastern Time (US & Canada)",
+        "utcOffset": -5
+      },
+      {
+        "id": "America/Halifax",
+        "displayName": "(UTC-04:00) Atlantic Time (Canada)",
+        "utcOffset": -4
+      }
+    ]
+  }
+  

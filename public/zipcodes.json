@@ -1,0 +1,26 @@
+[
+    {
+      "state": "New York",
+      "zipCodes": [
+        {"code": "10001"},
+        {"code": "10002"},
+        {"code": "10003"}
+      ]
+    },
+    {
+      "state": "California",
+      "zipCodes": [
+        {"code": "90001"},
+        {"code": "90002"},
+        {"code": "90003"}
+      ]
+    },
+    {
+      "state": "Texas",
+      "zipCodes": [
+        {"code": "75001"},
+        {"code": "75002"},
+        {"code": "75003"}
+      ]
+    }
+  ]

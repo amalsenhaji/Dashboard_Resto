@@ -1,0 +1,16 @@
+{
+    "fulfillmenttypes": [
+      {
+        "type": "delivery"
+      },
+      {
+        "type": "pickup"
+      },
+      {
+        "type": "drive-through"
+      },
+      {
+        "type": "dine-in"
+      }
+    ]
+}
